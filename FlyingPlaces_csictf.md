@@ -1,6 +1,10 @@
 # Flying Places
 ## Description
-```A reporter wanted to know where this flight is headed. Where does he (the reporter) live?```
+```
+A reporter wanted to know where this flight is headed. Where does he (the reporter) live?
+Link to image - 
+https://ctf.csivit.com/files/d9e383b1fa164eebe95ce06f418847c3/Flight.jpgtoken=eyJ1c2VyX2lkIjoxMTczLCJ0ZWFtX2lkIjozMzAsImZpbGVfaWQiOjQ4NTN9.XxblZw.Fgp75IVsLWHaxEpKQKUj-0NLCRk
+```
 ## Solutions
 This was another ~~FUN~~ Osint challenge.  
 We were given a picture of what looked like a plane and some kind of cargo.  
