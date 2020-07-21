@@ -1,3 +1,12 @@
+# Rivest Shamir Adleman
+This is an easy RSA challenge.
+The title of the challenge suggests its RSA.
+So I did the first thing anyone would do for any RSA challenge and put the modulus in factordb.
+And sure enough I got a factor for the modulus.
+After finding a factor for the modulus, decrypting the ciphertext is trivial.
+Here's my script.
+
+```python
 import math
 from Crypto.Util.number import long_to_bytes
 
@@ -26,3 +35,4 @@ phi = (p-1)*(q-1)
 d = modinv(e,phi)
 flag = long_to_bytes(pow(c,d,n))
 print(flag)
+```
