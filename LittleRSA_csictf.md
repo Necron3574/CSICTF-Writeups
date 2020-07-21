@@ -1,4 +1,11 @@
 # Little RSA
+## Description
+```
+The flag.zip contains the flag I am looking for but it is password protected. 
+The password is the encrypted message which has to be correctly decrypted so I can use it to open the zip file. 
+I tried using RSA but the zip doesn't open by it. Can you help me get the flag please?
+```
+## Solution
 So this challenge was even easier than the previous rsa challenge.  
 We are given a text file and password protected zip file.  
 The question hints that the password of the zip file is encrypted using rsa.  
