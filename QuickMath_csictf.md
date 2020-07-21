@@ -1,11 +1,17 @@
-import owiener
-import random
+# Quick Math
+This challenge had me going nuts. 
+On reading the challenge description I instantly thought that its some kind of hastads attack.
+So I wrote a script for a regular Hastads broadcast for e = 3. 
+But that gave me some gibberish.
+Later I got to know that plaintext was in hex format instead of the usual int format.
+Hence `long_to_bytes(pt)` wouldnt work and we would have to do `bytes.fromhex(str(pt))`.
+On doing that I got the flag easily enough.
+Here's my script.
+
+```python
 import math
-from sympy.ntheory import isprime
 from sympy.ntheory.modular import crt
-from sympy.functions.elementary.miscellaneous import cbrt
 from Crypto.Util.number import bytes_to_long, inverse , long_to_bytes
-import string
 
 def extended_gcd(aa, bb):
     lastremainder, remainder = abs(aa), abs(bb)
@@ -23,24 +29,6 @@ def modinv(a, m):
     if g != 1:
         raise ValueError
     return x % m
-
-def isqrt(x):
-    """Return the integer part of the square root of x, even for very
-    large integer values."""
-    if x < 0:
-        raise ValueError('square root not defined for negative numbers')
-    if x < 150:
-        return int(math.sqrt(x))  # use math's sqrt() for small parameters
-    n = int(x)
-    if n <= 1:
-        return n  # handle sqrt(0)==0, sqrt(1)==1
-    # Make a high initial estimate of the result (a little lower is slower!!!)
-    r = 1 << ((n.bit_length() + 1) >> 1)
-    while True:
-        newr = (r + n // r) >> 1  # next estimate by Newton-Raphson
-        if newr >= r:
-            return r
-        r = newr
 
 def find_root(n, x):
     low = 0
@@ -64,6 +52,7 @@ v = [c1,c2,c3]
 N = n1*n2*n3
 c = crt(m,v)
 c = int(c[0])
-c = find_root(c,3)
-flag = str(bytes.fromhex(str(c)))[2:-1]
+pt = find_root(c,3)
+flag = str(bytes.fromhex(str(pt)))[2:-1]
 print('csictf{' + flag + '}')
+```
