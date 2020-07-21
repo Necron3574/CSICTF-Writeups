@@ -1,10 +1,10 @@
-#This was a very interesting challenge.
-#My idea behind this was to lower the range of potential people from 300 to something lesser and then binary search the amount of cash since we have only 1000 tries.
-#So first I looped through all 300 people and checked for those who had money > 900000. I added all those people to a list.
-#After this I was left with 35 potential people. So I binary searched all of them and submitted the highest result among all of them to get the flag.
-#Here's my code.(It can be more efficient but meh)
+This was a very interesting challenge.
+My idea behind this was to lower the range of potential people from 300 to something lesser and then binary search the amount of cash since we have only 1000 tries.
+So first I looped through all 300 people and checked for those who had money > 900000. I added all those people to a list.
+After this I was left with 35 potential people. So I binary searched all of them and submitted the highest result among all of them to get the flag.
+Here's my code.(It can be more efficient but meh)
 
-import math
+```import math
 from pwn import *
 
 def cash_finder(i,up,down):
@@ -39,4 +39,4 @@ for i in list1:
         highest_cash = cash
 r.sendline('2 ' + str(highest_cash))
 print(r.recvline())
-
+```
