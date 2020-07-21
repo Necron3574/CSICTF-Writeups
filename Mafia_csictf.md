@@ -1,3 +1,4 @@
+#MAFIA
 This was a very interesting challenge.
 My idea behind this was to lower the range of potential people from 300 to something lesser and then binary search the amount of cash since we have only 1000 tries.
 So first I looped through all 300 people and checked for those who had money > 900000. I added all those people to a list.
