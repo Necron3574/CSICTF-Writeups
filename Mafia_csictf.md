@@ -1,12 +1,21 @@
 # MAFIA
-This was a very interesting challenge.
-My idea behind this was to lower the range of potential people from 300 to something lesser and then binary search the amount of cash each person had.
-But since we have only 1000 tries the code has to be very efficient so I decided to do it the lazy way.
-So first I looped through all 300 people and checked for those who had money > 900000. I added all those people to a list.
-This according to me should be a small number of people.
-On checking , the list had 35 potential people which is perfect. 
-So I binary searched all of them and submitted the highest result among all of them to get the flag.
-Here's my code.(It can be more efficient but meh)
+## Description
+```
+The CTF Mafia wants to remove the competition (i.e.you) to again have monopoly over flags. 
+Bribe the Mafia to get away unscathed and with the flag.
+nc chall.csivit.com 30721
+Link to problem - https://ctf.csivit.com/files/35d2b6e2f6112189754d3bf18268aa22/prob.pdftoken=eyJ1c2VyX2lkIjoxMTczLCJ0ZWFtX2lkIjozMzAsImZpbGVfaWQiOjQ4NTJ9.Xxbjeg.h_wQbrfm8UWdJFtdN2aGbSy4aI4
+```
+## Solution
+This was a very interesting challenge.  
+My idea behind this was to lower the range of potential people from 300 to something lesser and then binary search the amount of cash each person had.  
+But since we have only 1000 tries the code has to be very efficient so I decided to do it the lazy way.  
+So first I looped through all 300 people and checked for those who had money > 900000.  
+I added all those people to a list.    
+This according to me should be a small number of people.    
+On checking , the list had 35 potential people which is perfect.   
+So I binary searched all of them and submitted the highest result among all of them to get the flag.  
+Here's my code.(It can be more efficient but meh)  
 
 ```python
 import math
@@ -45,3 +54,5 @@ for i in list1:
 r.sendline('2 ' + str(highest_cash))
 print(r.recvline())
 ```
+Note that this doesn't work all the time but more like 90% of the time.     
+Just rerun it incase it didn't work.
