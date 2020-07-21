@@ -1,8 +1,11 @@
 # MAFIA
 This was a very interesting challenge.
-My idea behind this was to lower the range of potential people from 300 to something lesser and then binary search the amount of cash since we have only 1000 tries.
+My idea behind this was to lower the range of potential people from 300 to something lesser and then binary search the amount of cash each person had.
+But since we have only 1000 tries the code has to be very efficient so I decided to do it the lazy way.
 So first I looped through all 300 people and checked for those who had money > 900000. I added all those people to a list.
-After this I was left with 35 potential people. So I binary searched all of them and submitted the highest result among all of them to get the flag.
+This according to me should be a small number of people.
+On checking , the list had 35 potential people which is perfect. 
+So I binary searched all of them and submitted the highest result among all of them to get the flag.
 Here's my code.(It can be more efficient but meh)
 
 ```python
