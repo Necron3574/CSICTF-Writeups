@@ -1,4 +1,9 @@
 # Rivest Shamir Adleman
+## Description
+```
+These 3 guys encrypted my flag, but they didn't tell me how to decrypt it.
+```
+## Solution
 This is an easy RSA challenge.
 The title of the challenge suggests its RSA.
 So I did the first thing anyone would do for any RSA challenge and put the modulus in factordb.
