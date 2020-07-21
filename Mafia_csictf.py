@@ -4,7 +4,8 @@ So first I looped through all 300 people and checked for those who had money > 9
 After this I was left with 35 potential people. So I binary searched all of them and submitted the highest result among all of them to get the flag.
 Here's my code.(It can be more efficient but meh)
 
-```import math
+```python
+import math
 from pwn import *
 
 def cash_finder(i,up,down):
